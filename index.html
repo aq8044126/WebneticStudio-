@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Webnetic Studio | Abdul Qadeer</title>
+  <meta name="description" content="Webnetic Studio – Professional Web Design & Development by Abdul Qadeer. Clean, modern, responsive websites that convert.">
+  <meta name="keywords" content="Webnetic Studio, Abdul Qadeer, Web Developer, Nawab Shah, Portfolio, UI Design, Freelance Web Designer">
+  <meta name="author" content="Webnetic Studio">
+  <link href="style.css" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0f0f0f;
+      color: #cccccc;
+      scroll-behavior: smooth;
+    }
+    nav {
+      background-color: #00eaff;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 1rem;
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: white; }
+
+    .intro, .top-section, .cards-section, footer {
+      padding: 2rem;
+      text-align: center;
+    }
+    .intro {
+      background-color: #1a1a1a;
+      border-bottom: 2px solid #00eaff;
+    }
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid #00eaff;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+    h1, h2 { color: #00eaff; margin-bottom: 1rem; }
+    .box {
+      background-color: #00eaff;
+      color: #0f0f0f;
+      padding: 1rem;
+      margin: 0.5rem;
+      border-radius: 8px;
+      font-weight: bold;
+      box-shadow: 0 0 10px #00eaff;
+    }
+    .top-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .cards-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+    .flip-card {
+      background-color: transparent;
+      width: 250px;
+      height: 300px;
+      perspective: 1000px;
+    }
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      text-align: center;
+    }
+    .flip-card-front {
+      background-color: #1a1a1a;
+      color: #00eaff;
+      box-shadow: 0 0 10px #00eaff;
+    }
+    .flip-card-front img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px 10px 0 0;
+      margin-bottom: 1rem;
+    }
+    .flip-card-back {
+      background-color: #00eaff;
+      color: #0f0f0f;
+      transform: rotateY(180deg);
+      box-shadow: 0 0 10px #00eaff;
+    }
+    form {
+      background-color: #1a1a1a;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #00eaff;
+      color: #cccccc;
+      max-width: 600px;
+      margin: 2rem auto;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border-radius: 5px;
+      border: none;
+    }
+    button {
+      background-color: #00eaff;
+      color: #0f0f0f;
+      padding: 0.7rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    footer {
+      background-color: #111;
+      color: #777;
+      font-size: 0.9rem;
+    }
+    @media (max-width: 768px) {
+      .top-section, .cards-section {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section class="intro" id="home">
+    <img src="qadeer3.jpg" alt="Abdul Qadeer" class="profile-img">
+    <h1>Abdul Qadeer</h1>
+    <p>Founder of <strong>Webnetic Studio</strong></p>
+    <p>Professional Web Developer & Designer — Crafting modern, responsive websites that convert.</p>
+  </section>
+
+  <section class="top-section" id="skills">
+    <div class="box">HTML</div>
+    <div class="box">CSS</div>
+    <div class="box">JavaScript</div>
+    <div class="box">PHP</div>
+    <div class="box">UI/UX Design</div>
+    <div class="box">Brand Identity</div>
+    <div class="box">Responsive Layouts</div>
+  </section>
+
+  <section class="cards-section" id="projects">
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="img01.jpg" alt="Project 1">
+          <h3>Business Portfolio</h3>
+        </div>
+        <div class="flip-card-back">
+          <p>Clean, dark-themed portfolio with flipping cards and glowing effects for client impact.</p>
+        </div>
+      </div>
+    </div>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="img02.jpg" alt="Goal">
+          <h3>Client Website</h3>
+        </div>
+        <div class="flip-card-back">
+          <p>Fully responsive website built for a local business with branding and contact integration.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <form id="contact" onsubmit="return validateForm()">
+    <h2>Request a Website</h2>
+    <label>Name:</label><br/>
+    <input type="text" id="name"><br/>
+    <label>Email:</label><br/>
+    <input type="email" id="email"><br/>
+    <label>Message:</label><br/>
+    <textarea rows="5" id="message"></textarea><br/>
+    <button type="submit">Send</button>
+  </form>
+
+  <footer>
+    <p>© 2025 Webnetic Studio | Abdul Qadeer | Nawab Shah</p>
+    <p>Professional Web Design & Development Services</p>
+  </footer>
+
+  <script>
+    function validateForm() {
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const message = document.getElementById("message").value;
+      if (!name || !email || !message) {
+        alert("Please fill out all fields.");
+        return false;
+      }
+      return true;
+    }
+  </script>
+</body>
+</html>
